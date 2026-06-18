@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Kamu ❤️</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff9ecb,#ff69b4,#ff1493);
+    font-family:Arial, sans-serif;
+    overflow:hidden;
+}
+
+.card{
+    background:rgba(255,255,255,0.9);
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 0 30px rgba(255,255,255,0.5);
+    max-width:500px;
+}
+
+h1{
+    color:#ff1493;
+    font-size:40px;
+}
+
+p{
+    color:#444;
+    font-size:20px;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#ff1493;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+.heart{
+    position:absolute;
+    color:white;
+    font-size:20px;
+    animation:fall 5s linear infinite;
+}
+
+#popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    animation:fadeIn .5s;
+}
+
+.popup-box{
+    background:linear-gradient(135deg,#ffb6d9,#ff69b4);
+    padding:35px;
+    border-radius:25px;
+    text-align:center;
+    color:white;
+    width:350px;
+    box-shadow:0 0 30px rgba(255,255,255,0.6);
+    animation:zoom .5s;
+}
+
+.popup-box h1{
+    margin-top:0;
+}
+
+.popup-box button{
+    margin-top:15px;
+    background:white;
+    color:#ff1493;
+    font-weight:bold;
+}
+
+@keyframes zoom{
+    from{
+        transform:scale(0.5);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-100px);
+    }
+    to{
+        transform:translateY(110vh);
+    }
+}
+</style>
+</head>
+
+<div class="card">
+    <h1>❤️ Hai Dede Lina ❤️</h1>
+    <p>
+        Aku sudah lama menyimpan rasa ini.<br><br>
+        Kamu adalah orang yang selalu membuat hariku lebih berwarna.
+        Karena itu aku ingin bertanya...
+    </p>
+
+    <h2 style="color:#ff1493;">
+        Mau nggak jadi pacarku? 🌹💕
+    </h2>
+
+    <button onclick="jawab()">Klik Jawabanmu</button>
+</div>
+
+<script>
+function jawab(){
+    document.body.innerHTML += `
+    <div id="popup">
+        <div class="popup-box">
+            <h1>💖 YEEAAAYYY 💖</h1>
+            <p>
+                Terima kasih sudah membuka hatimu! 🌹<br>
+                Semoga kita bisa membuat banyak kenangan indah bersama. ❤️
+            </p>
+            <button onclick="tutupPopup()">Tutup</button>
+        </div>
+    </div>
+    `;
+}
+
+function tutupPopup(){
+    document.getElementById("popup").remove();
+}
+</script>
+
+</body>
+</html>
