@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALL SETTINGS XRYZN</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Arial,sans-serif;
+background:#0A0A0A;
+color:#fff;
+line-height:1.6;
+}
+header{
+position:sticky;top:0;
+background:rgba(10,10,10,.9);
+backdrop-filter:blur(10px);
+padding:15px 8%;
+border-bottom:1px solid #222;
+}
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.logo{
+font-size:28px;
+font-weight:700;
+color:#8B5CF6;
+text-shadow:0 0 15px #8B5CF6;
+}
+.menu a{
+color:#fff;
+text-decoration:none;
+margin-left:20px;
+}
+.hero{
+min-height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:radial-gradient(circle at center,#1b1038,#0A0A0A 60%);
+}
+.hero h1{
+font-size:64px;
+margin-bottom:15px;
+text-shadow:0 0 20px #8B5CF6;
+}
+.hero p{
+max-width:700px;
+font-size:20px;
+color:#ccc;
+}
+.btns{
+margin-top:30px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+.btn{
+padding:14px 28px;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+}
+.primary{
+background:#8B5CF6;
+color:#fff;
+box-shadow:0 0 20px #8B5CF6;
+}
+.secondary{
+border:1px solid #00D4FF;
+color:#00D4FF;
+}
+section{padding:80px 8%}
+h2{text-align:center;margin-bottom:40px;font-size:38px}
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+.card{
+background:#171717;
+padding:25px;
+border-radius:18px;
+border:1px solid #262626;
+transition:.3s;
+}
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px rgba(139,92,246,.4);
+}
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center;
+}
+.feature{
+background:#171717;
+padding:20px;
+border-radius:15px;
+}
+footer{
+text-align:center;
+padding:30px;
+border-top:1px solid #222;
+color:#aaa;
+}
+.gaming-btn{
+background:linear-gradient(45deg,#8B5CF6,#6D28D9);
+color:white;
+font-size:16px;
+font-weight:bold;
+padding:12px 25px;
+border:none;
+border-radius:12px;
+cursor:pointer;
+margin-top:10px;
+text-transform:uppercase;
+
+box-shadow:
+0 0 10px #8B5CF6,
+0 0 20px #8B5CF6;
+
+transition:all .3s ease;
+}
+
+.gaming-btn:hover{
+transform:translateY(-3px) scale(1.05);
+
+box-shadow:
+0 0 15px #8B5CF6,
+0 0 30px #8B5CF6,
+0 0 45px #8B5CF6;
+}
+
+.gaming-btn:active{
+transform:scale(0.95);
+}
+.flame-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+overflow:hidden;
+background:#0A0A0A;
+}
+
+.flame{
+position:absolute;
+bottom:-150px;
+width:200px;
+height:200px;
+background:radial-gradient(circle,
+rgba(168,85,247,0.9) 0%,
+rgba(139,92,246,0.7) 30%,
+rgba(109,40,217,0.4) 60%,
+transparent 80%);
+border-radius:50%;
+filter:blur(40px);
+animation:flameRise 8s infinite linear;
+}
+
+.flame:nth-child(1){
+left:10%;
+animation-delay:0s;
+}
+
+.flame:nth-child(2){
+left:35%;
+animation-delay:2s;
+}
+
+.flame:nth-child(3){
+left:60%;
+animation-delay:4s;
+}
+
+.flame:nth-child(4){
+left:85%;
+animation-delay:6s;
+}
+
+@keyframes flameRise{
+0%{
+transform:translateY(0) scale(0.8);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+100%{
+transform:translateY(-120vh) scale(1.5);
+opacity:0;
+}
+}
+
+.social-container{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.social-btn{
+padding:15px 25px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+border-radius:12px;
+transition:.3s;
+}
+
+.social-btn:hover{
+transform:scale(1.08);
+}
+
+.wa{
+background:#25D366;
+box-shadow:0 0 15px #25D366;
+}
+
+.ig{
+background:#E1306C;
+box-shadow:0 0 15px #E1306C;
+}
+
+.tt{
+background:#000;
+border:1px solid #fff;
+box-shadow:0 0 15px #fff;
+}
+
+.dc{
+background:#5865F2;
+box-shadow:0 0 15px #5865F2;
+}
+</style>
+
+</head>
+
+<header>
+<nav>
+<div class="logo">ALL SETTINGS XRYZN</div>
+<div class="menu">
+<a href="#produk">Produk</a>
+<a href="#unggulan">Keunggulan</a>
+<a href="#kontak">Kontak</a>
+</div>
+</nav>
+</header>
+
+<section class="hero">
+<h1>ALL SETTINGS XRYZN</h1>
+<p>SETTINGAN GGMP AND EMULATOR BY XRYZN.</p>
+<div class="btns">
+<a class="btn primary" href="#produk">Beli Sekarang</a>
+<a class="btn secondary" href="#produk">Lihat Produk</a>
+</div>
+</section>
+
+<section id="produk">
+<h2>ALL SETTINGS</h2>
+<div class="cards">
+
+<div class="card">
+<h3> Set Mobi V1</h3>
+<p>Harga: Rp10.000</p>
+
+<button class="gaming-btn" onclick="showQR('V1')">
+ BELI SEKARANG
+</button>
+</div>
+
+<div class="card">
+<h3> Set Mobi V2</h3>
+<p>Harga: Rp15.000</p>
+
+<button class="gaming-btn" onclick="showQR('V2')">
+ BELI SEKARANG
+</button>
+</div>
+
+<div class="card">
+<h3> Set Mobi V3</h3>
+<p>Harga: Rp20.000</p>
+
+<button class="gaming-btn" onclick="showQR('V3')">
+ BELI SEKARANG
+</button>
+</div>
+
+<div class="card">
+<h3> Set Mobi V4</h3>
+<p>Harga: Rp25.000</p>
+
+<button class="gaming-btn" onclick="showQR('V4')">
+ BELI SEKARANG
+</button>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="kontak">
+<h2>📱 ALL SOSMED</h2>
+
+<div class="social-container">
+
+<a href="https://wa.me/628132027384" target="_blank" class="social-btn wa">
+WhatsApp
+</a>
+
+<a href="https://www.instagram.com/xrayzennn?igsh=MTB0emJnMW11b25hZg==" target="_blank" class="social-btn ig">
+Instagram
+</a>
+
+<a href="https://www.tiktok.com/@xrayzennnnn?is_from_webapp=1&sender_device=pc" target="_blank" class="social-btn tt">
+TikTok
+</a>
+
+<a href="https://discord.gg/ac4bPJhh7" target="_blank" class="social-btn dc">
+Discord
+</a>
+
+</div>
+</section>
+
+<footer>
+© 2026 ALL SETTING XRYZN
+</footer>
+
+</html>
+<!-- POPUP QR GAMING -->
+
+<div id="popupQR" class="popup">
+
+<div class="popup-box">
+
+<h2 id="judulProduk">Pembayaran</h2>
+
+<img id="gambarQR" src="" width="250">
+
+<p>Scan QR untuk melakukan pembayaran</p>
+
+<a
+id="waButton"
+href="https://wa.me/628132027384"
+target="_blank"
+class="wa-btn">
+Konfirmasi Pembayaran
+</a>
+
+<br><br>
+
+<button onclick="closeQR()" class="close-btn">
+Tutup
+</button>
+
+</div>
+
+</div>
+
+<style>
+
+.popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.85);
+justify-content:center;
+align-items:center;
+z-index:9999;
+backdrop-filter:blur(5px);
+}
+
+.popup-box{
+background:#111;
+padding:25px;
+border-radius:20px;
+text-align:center;
+border:2px solid #8B5CF6;
+box-shadow:
+0 0 15px #8B5CF6,
+0 0 30px #8B5CF6;
+}
+
+.popup-box h2{
+color:#fff;
+margin-bottom:15px;
+}
+
+.popup-box p{
+color:#ccc;
+}
+
+.popup-box img{
+border-radius:10px;
+border:2px solid #8B5CF6;
+box-shadow:0 0 15px #8B5CF6;
+}
+
+.wa-btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 20px;
+background:#25D366;
+color:white;
+text-decoration:none;
+font-weight:bold;
+border-radius:10px;
+}
+
+.wa-btn:hover{
+transform:scale(1.05);
+transition:.3s;
+}
+
+.close-btn{
+margin-top:10px;
+padding:10px 20px;
+background:#8B5CF6;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+.close-btn:hover{
+box-shadow:0 0 15px #8B5CF6;
+}
+
+</style>
+
+<script>
+
+function showQR(produk){
+
+let qr = "";
+
+if(produk=="V1"){
+qr="qris.jpg";
+}
+
+if(produk=="V2"){
+qr="qris.jpg";
+}
+
+if(produk=="V3"){
+qr="qris.jpg";
+}
+
+if(produk=="V4"){
+qr="qris.jpg";
+}
+
+document.getElementById("judulProduk").innerHTML =
+"Pembayaran Set Mobi " + produk;
+
+document.getElementById("gambarQR").src = qr;
+
+document.getElementById("waButton").href =
+"https://wa.me/628132027384?text=Halo%20xryzn%20saya%20sudah%20membayar%20pembelian%20sertabukti%20pembelian%20Set%20Mobi%20" + produk;
+
+document.getElementById("popupQR").style.display="flex";
+}
+
+function closeQR(){
+document.getElementById("popupQR").style.display="none";
+}
+
+</script>
+
+<body>
+
+<div class="flame-bg">
+    <div class="flame"></div>
+    <div class="flame"></div>
+    <div class="flame"></div>
+    <div class="flame"></div>
+</div>
+
